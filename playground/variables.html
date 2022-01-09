@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>variables</title>
+    <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+
+    <script>
+        /* JavaScript statements are the commands to tell the browser to what action to perform. Statements are separated by semicolon (;). */
+
+        //three type of variable available in javascript. var, let and const
+        var name = 'mamun';
+        let age = 26;
+        const gender = 'male';
+
+        /*
+        ***var declarations are globally scoped or function/locally scoped.
+
+        function newFunction() {
+            var hello = "hello";
+        }
+        console.log(hello); // error: hello is not defined
+
+        ***var variables can be re-declared and updated
+        var greeter = "hey hi";
+        var greeter = "say Hello instead";
+
+        var greeter = "hey hi";
+        greeter = "say Hello instead";
+        
+        ***let is block scoped
+        let times = 4;
+        if (times > 3) {
+            let hello = "say Hello instead";
+            console.log(hello);// "say Hello instead"
+        }
+        console.log(hello) // hello is not defined
+
+        ***let can be updated but not re-declared.
+        let greeting = "say Hi";
+        greeting = "say Hello instead";
+
+        let greeting = "say Hi";
+        let greeting = "say Hello instead"; // error: Identifier 'greeting' has already been declared
+
+        ***const declarations are also block scoped
+        const greeting = "say Hi";
+        greeting = "say Hello instead";// error: Assignment to constant variable. 
+
+        const greeting = "say Hi";
+        const greeting = "say Hello instead";// error: Identifier 'greeting' has already been declared
+        ***const cannot be updated or re-declared
+
+        read more https://www.freecodecamp.org/news/var-let-and-const-whats-the-difference/
+        */
+
+        /*
+        naming convention
+        variable can start with a to z, _ and also $
+        can't start with number but let n9 = 'n9'; are valid
+        let iLoveCoding = true;
+        
+        */
+
+        let iLoveCoding = true; //camel case. most use and good practice
+        let ILoveCoding = true; // PascalCase/ upper camel case. most use for class
+        let i_love_coding = true; // snake case
+        let $ilovecoding = true; // this pattern use in jquery
+        let _ilovecoding = true;// this pattern use in lodash. for privet function
+    </script>
+</body>
+
+</html>
