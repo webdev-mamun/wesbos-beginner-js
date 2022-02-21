@@ -14,3 +14,7 @@
         **symbol => A “symbol” represents a unique identifier.
    ***object => Everything in javascript are object
 */
+
+function() {
+   return 'jfkljfjas';
+}
