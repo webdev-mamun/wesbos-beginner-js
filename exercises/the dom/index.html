@@ -10,6 +10,7 @@
 
 <body>
     <div class="items">
+        <img class="nice" src="https://picsum.photos/500" alt="">
         <div class="item">
             <img src="https://picsum.photos/200" alt="">
             <p>Hi I'm a item</p>
@@ -29,6 +30,15 @@
     <style>
         h2 span {
             display: none;
+        }
+
+        img {
+            transition: all 0.2s;
+        }
+
+        .open {
+            border-radius: 50%;
+            transform: rotate(360deg);
         }
     </style>
     <script src="./the-dom.js"></script>
