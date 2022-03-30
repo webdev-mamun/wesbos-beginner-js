@@ -65,7 +65,6 @@ const playerOne = generatePlayerCard("Mamun", 26, 1.651);
 const playerTwo = generatePlayerCard("Tanjim", 27, 1.651);
 const playerThree = generatePlayerCard("Jeshan", 29, 1.651);
 const playerFour = generatePlayerCard("Imran", 28, 1.8796);
-console.log(typeof playerOne);
 //append those cards to the div
 cards.insertAdjacentHTML("afterbegin", playerOne);
 cards.insertAdjacentHTML("afterbegin", playerTwo);
