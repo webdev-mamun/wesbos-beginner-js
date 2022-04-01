@@ -54,7 +54,6 @@ function clearCanvas() {
   canvas.addEventListener(
     "animationend",
     function () {
-      console.log("the end");
       canvas.classList.remove("shake");
     },
     { once: true }
