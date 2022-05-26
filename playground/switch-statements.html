@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Switch statments</title>
+  <link rel="stylesheet" href="../base.css">
+  <style>
+    .turt {
+      --rotateX: 0deg;
+      --rotate: 0deg;
+      --x: 0px;
+      --y: 0px;
+      transform: translate(var(--x), var(--y)) rotateY(var(--rotateX)) rotate(var(--rotate));
+      transition: transform .5s;
+    }
+  </style>
+</head>
+
+<body>
+  <img width="200" src="./turtle.png" alt="turt" class="turt" />
+  <script>
+    const turt = document.querySelector('.turt');
+    let speed = 20;
+    let x = 0;
+    let y = 0;
+    let flipped = false;
+
+    function handleKeyup(event) {
+      if (!event.key.includes('Arrow')) { return; }
+      switch (event.key) {
+        case 'ArrowUp':
+          y = y - 1;
+          rotate = -90;
+          break;
+        case 'ArrowDown':
+          y = y + 1;
+          rotate = 90;
+          break;
+        case 'ArrowLeft':
+          x = x - 1;
+          flipped = true;
+          rotate = 0;
+          break;
+        case 'ArrowRight':
+          x = x + 1;
+          flipped = false;
+          rotate = 0;
+          break;
+        default:
+          console.log('wrong command📕');
+      }
+      turt.setAttribute('style', `
+      --rotate: ${rotate}deg;
+      --rotateX: ${flipped ? '180deg' : '0deg'};
+      --x: ${x * speed}px; 
+      --y: ${y * speed}px;`);
+    }
+
+    window.addEventListener("keyup", handleKeyup);
+  </script>
+</body>
+
+</html>
