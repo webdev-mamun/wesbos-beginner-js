@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Object</title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <script>
+    const name = "Mamun"
+    const workAs = "Web developer"
+    const person = {
+      name,
+      age: 27,
+      job: workAs,
+      'is cool': false,
+      cloths: {
+        shirts: 10,
+        pants: 7,
+        't shirts': 8,
+      },
+      sayHello: function (greeting = "hey") {
+        return `${greeting} ${this.name}`;
+      },
+    }
+    console.log(person);
+    console.log(person.job);
+    console.log(person['is cool']);
+    person.permanentCity = "Jessore";
+    person['current-city'] = "Dhaka";
+    console.log(person.cloths.shirts);
+    console.log(person.cloths['t shirts'])
+  </script>
+</body>
+
+</html>
